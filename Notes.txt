@@ -1,0 +1,3 @@
+Start Eureka --> From Intellij
+Start Configuration Server --> From Intellij
+Strart Vault Server --> vault server -dev
