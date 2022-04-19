@@ -1,3 +1,9 @@
 Start Eureka --> From Intellij
 Start Configuration Server --> From Intellij
-Strart Vault Server --> vault server -dev
+Start Vault Server --> vault server -dev
+Update Root token in Code for vault
+Upload secrets in vault
+Start Rabbit-MQ Win-Start--> Type Rabbit Mq start and hit enter 
+Start Api-GateWay Service
+Start Order Service
+Start Product Service
