@@ -1,0 +1,28 @@
+Unseal Key: Fgtv6OUO6YgMIMG5aISEdFZBEc183LqX0t/rmnFpFp8= // Changes Everytime When you will restart vault server
+Root Token: hvs.N8PF5lurWiJxJlnMtAUZUaD1  // Changes Everytime When you will restart vault server
+
+# Go to C:\Vault_1.10.0
+# vault server -dev to start vault server
+# http://127.0.0.1:8200 vault server url
+# use root token to login
+# >set VAULT_ADDR=http://127.0.0.1:8200
+# echo $Env:%VAULT_ADDR%
+# vault kv put secret/order-service @filename.json
+
+
+Everytime When you will restart vault server you need to update root token in bootstrap.properties of order and product service 
+and Also You need to push the secrets to the vault server as well everytime using below cmds in this location
+C:\Vault_1.10.0 becaus files are present here
+
+vault kv put secret/order-service @order-service.json
+vault kv put secret/product-service @product-service.json
+vault kv put secret/inventory-service @inventory-service.json
+
+# To fetch the secrets
+# vault kv get secret/order-service
+
+
+
+In KeyCloak
+Spring-cloud-gateway-client --> Credentials
+REh3FhFhOl0FrW5cfEabOJB1tRPSXPcr
