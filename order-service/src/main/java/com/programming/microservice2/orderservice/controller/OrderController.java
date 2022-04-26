@@ -16,7 +16,8 @@ import java.util.UUID;
 @RequestMapping("/api/order")
 @Slf4j
 @RequiredArgsConstructor
-public class OrderController {
+public class
+OrderController {
 
     private final OrderRepository orderRepository;
     private final InventoryClient inventoryClient;
