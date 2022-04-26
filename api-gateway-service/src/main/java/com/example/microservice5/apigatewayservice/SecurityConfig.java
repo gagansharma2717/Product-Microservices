@@ -13,6 +13,7 @@ import static org.springframework.security.config.Customizer.withDefaults;
 @EnableWebFluxSecurity
 public class SecurityConfig {
 
+  
 //   This one is fpr browser based login
 //    @Bean
 //    public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http){
