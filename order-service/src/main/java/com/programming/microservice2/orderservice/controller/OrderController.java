@@ -18,8 +18,8 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class OrderController {
 
-    private OrderRepository orderRepository;
-    private InventoryClient inventoryClient;
+    private final OrderRepository orderRepository;
+    private final InventoryClient inventoryClient;
 
 
 
@@ -27,17 +27,18 @@ public class OrderController {
     public String placeOrder(@RequestBody OrderDto orderDto){
 
         boolean allProductsInStock = orderDto.getOrderLineItemsList().stream()
-               .allMatch(orderLineItems -> inventoryClient.checkStock(orderLineItems.getSkuCode()));
+                .allMatch(orderLineItems -> inventoryClient.checkStock(orderLineItems.getSkuCode()));
 
         if(allProductsInStock)
         {
-        Order order = new Order();
-        order.setOrderLineItems(orderDto.getOrderLineItemsList());
-        order.setOrderNumber(UUID.randomUUID().toString());
+            Order order = new Order();
+            order.setOrderLineItems(orderDto.getOrderLineItemsList());
+            order.setOrderNumber(UUID.randomUUID().toString());
 
-        orderRepository.save(order);
+            orderRepository.save(order);
 
-        return "Order Placed Successfully";}
+            return "Order Placed Successfully";
+        }
         else{
             return "Order Failed, One of the products is not in stock";
         }
