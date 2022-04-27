@@ -1,6 +1,5 @@
 package com.programming.microservice2.orderservice.model;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
