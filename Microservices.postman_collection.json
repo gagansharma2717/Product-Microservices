@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "074bd3cb-b2e0-4fad-97f8-8a83739ca371",
+		"name": "Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:62994/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62994",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Configurations",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Test_Property",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:49870/api/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49870",
+					"path": [
+						"api",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BusRefresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:49870/actuator/busrefresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49870",
+					"path": [
+						"actuator",
+						"busrefresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actuator Refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:49870/actuator/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49870",
+					"path": [
+						"actuator",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API-Gateway",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientId",
+							"value": "spring-cloud-gateway-client",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "REh3FhFhOl0FrW5cfEabOJB1tRPSXPcr",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8180/auth/realms/microservices-relm/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ6RWtpa2llYzNEd1dGSmoxdkItdHRPYVVfak9ZWDAtT2xSdldTUjdXQXV3In0.eyJleHAiOjE2NTA1NDIyMTAsImlhdCI6MTY1MDU0MTkxMCwianRpIjoiYThlN2I4YTYtYWJhMS00ZjA2LWExMDMtY2E0MzJmYjIyZjFhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgwL2F1dGgvcmVhbG1zL21pY3Jvc2VydmljZXMtcmVsbSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1OGZlZTA5Yy02MDc2LTQ1ZTctOTBiNC1lMTMwZWY2NzFkYjUiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzcHJpbmctY2xvdWQtZ2F0ZXdheS1jbGllbnQiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtbWljcm9zZXJ2aWNlcy1yZWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIG9mZmxpbmVfYWNjZXNzIGVtYWlsIHByb2ZpbGUiLCJjbGllbnRIb3N0IjoiMTI3LjAuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRJZCI6InNwcmluZy1jbG91ZC1nYXRld2F5LWNsaWVudCIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1zcHJpbmctY2xvdWQtZ2F0ZXdheS1jbGllbnQiLCJjbGllbnRBZGRyZXNzIjoiMTI3LjAuMC4xIn0.O-tjJToXPmlhQywSODnFFJGvF4sMBa-2q4XBMYNnV_0YTEuNT1dwW2Y1OFAAtCn0r_ogQHElVlqz1hYaU_WqlF6Gbbth_Jmg0tPyE-PCN7mxEO6tl8-ATCsZZhfqZcJYyssGQ17CE9E8ArRIH4luBjvit6D60Dts2Isx_shv6e_zelSU5Xl4SWZiI_C9ggaW0kT44-cS7Q7OsTJdZ1WrSM8NOuH13a3pj5njCkllyBrOoN48y3aJsqE6kiCbP5lgNhpkXutK1t-n9GZbCMHVPeaWGJvcItG4fZ6m24SDgg5HTGfbbJAEXP1GwxyPYJg1qS-IbLdNNh0MOWIvHFthzg",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid offline_access",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
