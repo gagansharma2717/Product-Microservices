@@ -18,11 +18,11 @@
 </p>
   <h3>OAuth2.0 Token</h3>
   <p>
-  <img src="Images\Screenshot (299).png" />
+  <img src="Images\Screenshot (299-1).png" />
 </p>
   <h3>Product Details</h3>
   <p>
-  <img src="Images\Screenshot (300).png" />
+  <img src="Images\Screenshot (300-1).png" />
 </p>
    <h3>Order Line Items</h3>
    <p>
