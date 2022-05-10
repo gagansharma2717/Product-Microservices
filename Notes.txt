@@ -9,4 +9,5 @@ Go to --> C:\keycloak-16.1.1\bin
 standalone.bat -Djboss.http.port=8180
 Start Order Service
 Start Product Service
+Start Inventory Service
 Start Api-GateWay Service
